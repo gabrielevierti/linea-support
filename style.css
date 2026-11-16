@@ -1,4 +1,4 @@
-/* Linea · sito di supporto. Blu notte e i cinque colori della metro, come nell'app. */
+/* LineaMI · sito di supporto. Blu notte e i cinque colori della metro, come nell'app. */
 :root {
   color-scheme: dark;
   --bg: #0b1129;
@@ -88,6 +88,7 @@ html[data-lang="it"] .langs [data-set="it"] { background: var(--surface-2); colo
 .hero .lead { font-size: clamp(19px, 2.2vw, 22px); color: var(--muted); margin: 0 0 28px; max-width: 34em; }
 .hero .icon { width: min(300px, 70vw); justify-self: center; filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.45)); }
 .hero .lines { width: 240px; margin-bottom: 30px; }
+.hero .app-name { font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; letter-spacing: -0.015em; color: var(--muted); margin: 0 0 6px; }
 .pills { display: flex; flex-wrap: wrap; gap: 10px; }
 .pill {
   border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px;
@@ -118,6 +119,27 @@ h2 { font-size: clamp(30px, 4vw, 42px); letter-spacing: -0.025em; line-height: 1
 .c1 { background: rgba(227, 36, 43, 0.18); } .c2 { background: rgba(0, 166, 81, 0.18); }
 .c3 { background: rgba(255, 205, 0, 0.16); } .c4 { background: rgba(47, 107, 255, 0.2); }
 .c5 { background: rgba(163, 91, 181, 0.2); }
+
+/* ---------- Il viaggio, dal vivo ---------- */
+.showcase {
+  background: linear-gradient(180deg, var(--bg-2), var(--bg));
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+/* Immagini allineate in basso, didascalie sotto tutte alla stessa altezza. */
+.shot { margin: 0; display: grid; grid-template-rows: 1fr auto; gap: 16px; justify-items: center; text-align: center; }
+.shot img { align-self: end; }
+.shot figcaption { align-self: start; }
+.shot img {
+  width: 100%; max-width: 290px; height: auto; border-radius: 38px; border: 8px solid #1b1d22;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.shot.watch img { max-width: 230px; border-radius: 56px; border: 14px solid #2e2f34; }
+.shot figcaption { color: var(--muted); font-size: 15.5px; max-width: 19em; }
+@media (max-width: 760px) {
+  .shots { grid-template-columns: 1fr; gap: 44px; }
+  .shot img { max-width: 260px; }
+}
 
 /* ---------- Domande ---------- */
 .faq details {

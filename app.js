@@ -1,4 +1,4 @@
-// Linea · sito di supporto: scelta della lingua (Italiano / English), ricordata nel browser.
+// LineaMI · sito di supporto: scelta della lingua (Italiano / English), ricordata nel browser.
 (function () {
   var root = document.documentElement;
 
